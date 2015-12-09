@@ -1,0 +1,410 @@
+html{
+	font-family: georgia;
+}
+
+.loginDiv{
+	font-family: georgia;
+	position: fixed;
+	border: .25em inset #00CC00;
+	outline: .1em solid #009933;
+	outline-offset: -.65em;
+	height: 77%;
+	width: 90%;
+	text-align: center;
+	left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+	padding-top: 8%;
+	background-color: #272727;
+}
+
+.loginTitle{
+	color: #009933;
+	font-size: 3em;
+}
+
+.login{
+	background-color: black;
+	font-size: 2em;
+	color: #009933;
+	text-align: center;
+}
+
+.login:focus{
+	outline-color:#00CC00;
+}
+
+
+#toSignUp{
+	color: #009933;
+	display: inline-block;
+	margin-top: 15%;
+}
+
+#toSignUp:hover{
+	outline: 1px solid #009933;
+	cursor: pointer;
+}
+
+#toSignUp:active{
+	background-color: #009933;
+	color: #1E0E00;
+}
+
+.signInButton{
+	font-size: 1.5em;
+	outline: .15em outset #00CC00;
+	color: #0F0700;
+	border: 0px transparent;
+}
+
+#loginDiv{
+	display: none;
+}
+
+#signupDiv{
+	display: none;
+}
+
+#signupResponse{
+	color: #009933;
+}
+
+#signupResponse{
+	color: #009933;
+}
+
+#signupResponse:hover{
+	cursor: pointer;
+}
+
+#imdiv{
+	display: block;
+	font-family: georgia;
+	position: absolute;
+	border: .25em inset #00CC00;
+	outline: .1em solid #1E0E00;
+	outline-offset: -.65em;
+	height: 75%;
+	width: 90%;
+	max-width: 75em;
+	min-width: 50em;
+	max-height: 70em;
+	min-height: 45em;
+	left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+	background-color: white;
+	overflow: hidden;
+}
+
+#searchbar{
+	position: fixed;
+	display: block;
+	margin-bottom: 30em;
+	left: 50%;
+}
+
+#searchButt{
+	font-size: 1.1em;
+	box-shadow: .35em .35em .25em #d6d6d6;
+	color: #383838;
+	border: 2px solid #009933;
+	border-radius: .2em;
+	background-color: #eeeeee;
+}
+
+#searchButt:hover{
+	background-color: #383838;
+	color: #eeeeee;
+}
+
+#statusImg{
+	margin-top: 5em;
+}
+
+#searchFriend{
+	font-size: 1.15em;
+	background-size: 1.35em 1.35em;
+	background-repeat: no-repeat;
+	background-position: right;
+	border: 1px solid #383838;
+	border-radius: .25em;
+	padding-left: .5em;
+	padding-right: 1.5em;
+	box-shadow: .35em .35em .25em #d6d6d6;
+}
+
+.window{
+	font-family: georgia;
+	margin-top: 1.5%;
+	width: 40%;
+	min-width: 20em;
+	height: 0em;
+    transition: height 1s;
+	border: .25em outset #009933;
+	border-radius: .15em;
+	margin-left: 1%;
+	padding-top: 1.15em;
+	display: block;
+	z-index: 2;
+}
+
+#convoName{
+	margin-left: 2em;
+}
+
+.conversation{
+	width: 90%;
+	height: 65%;
+	overflow-y: hidden;
+	position: relative;
+	background-color: #d6d6d6;
+	border: 1px solid #d6d6d6;
+	left: 50%;
+    top: 50%;
+    transform: translate(-50%, -75%);
+}
+
+.conversation::-webkit-scrollbar{
+	width: .5em;
+}
+
+.conversation::-webkit-scrollbar-thumb{
+	background-color: #383838;
+}
+
+.messages{
+	width: 100%;
+	bottom: 2.5%;
+	position: absolute;
+}
+
+.myMessage{
+	background-color: #383838;
+	color: white;
+	border: 1px solid #eeeeee;
+	border-radius: .25em;
+	float: right;
+	clear: both;
+	width: 50%;
+	margin-right: 6%;
+	padding-right: 5%;
+	padding-left: 5%;
+}
+
+.theirMessage{
+	border: 1px solid #eeeeee;
+	border-radius: .25em;
+	background-color: white;
+	color: #383838;
+	float: left;
+	clear: both;
+	width: 50%;
+	margin-left: 6%;
+	padding-right: 5%;
+	padding-left: 5%;
+}
+
+#startConvo{
+	text-align:center;
+	color: #00CC00;
+	font-weight: bold;
+	bottom: 0%;
+}
+
+.inputBox{
+	display: none;
+    margin-left: auto;
+    margin-right: auto;
+	border-radius: .35em;
+	border-color: #383838;
+	margin-top: 5%;
+	padding: .25em;
+}
+
+.inputBox:focus{
+	outline: 0px transparent;
+}
+
+#usertext {
+	background-size: 1.35em 1.35em;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.sendMessage{
+	display: none;
+    margin-left: auto;
+    margin-right: auto;
+	margin-top: -.5em;
+	border-radius: .35em;
+	font-size: 1.15em;
+}
+
+.sendMessage:focus{
+	outline: 0px transparent;
+}
+
+#showRecent{
+	position: fixed;
+	left: 50%;
+	margin-top: 6em;
+	text-align: center;
+	color: #009933;
+	display: block;
+	z-index: 1;
+	padding: .15em;
+	background-color: #eeeeee;
+	border: .2em solid #383838;
+	border-radius: .25em;
+	box-shadow: .5em .5em .35em #d6d6d6;
+}
+
+#showRecent th{
+	border: .35em outset #00CC00;
+	border-radius: .35em;
+	padding: .25em;
+	background-color: white;
+	color: #272727;
+}
+
+#showRecent td{
+	border: .15em outset #8A827B;
+	background-color: white;
+	border-radius: .35em;
+	color: #383838;
+}
+
+#showRecent td:hover{
+	cursor: pointer;
+	background-color: #272727;
+	color: white;
+}
+
+#showRecent td:active{
+	background-color: #00CC00;
+}
+
+#acOptions{
+	list-style-type: none;
+	-webkit-column-count: 3;
+    column-count: 3;
+	-webkit-column-width: 5em;
+    column-width: 5em;
+	width: auto;
+	position: fixed;
+	left: 45%;
+	top: 66%;
+}
+
+#acOptions li{
+	font-size: 2em;
+	text-align: center;
+	background-color: white;
+	color: #383838;
+	border: 1px solid #eeeeee;
+	border-radius: .15em;
+	-webkit-column-break-inside: avoid;
+    page-break-inside: avoid;
+	border-collapse: collapse;
+	width: auto;
+}
+
+#acOptions li:nth-child(odd){
+	background-color: #d6d6d6;
+	color: white;
+}
+
+#acOptions li:hover{
+	background-color: #383838;
+	color: #eeeeee;
+	cursor: pointer;
+}
+
+#acOptions li:focus{
+	background-color: #383838;
+	color: #eeeeee;
+	cursor: pointer;
+}
+
+.selectWord{
+	font-family: georgia;
+	background-color: transparent;
+	border: 0px solid transparent;
+	width: 100%;
+	height: 100%;
+	font-size: .5em;
+}
+
+.selectWord:hover{
+	background-color: #383838;
+	color: #eeeeee;
+	cursor: pointer;
+}
+
+.selectWord:focus{
+	background-color: #383838;
+	color: #eeeeee;
+	cursor: pointer;
+	outline: .35em solid #383838;
+}
+
+#settingsPic{
+	position: fixed;
+	right: 2%;
+	bottom: 2%;
+	outline: 1px solid transparent;
+	outline-offset: .15em;
+}
+
+#settingsPic:hover{
+	outline-color: #d6d6d6;
+	cursor: pointer;
+}
+
+#optionsList{
+	display: none;
+	border: 1px solid #383838;
+	border-radius: .15em;
+	position: fixed;
+	right: 4%;
+	bottom: 4%;
+	list-style-type: none;
+	padding-right: 1em;
+	padding-left: 1em;
+	background-color: white;
+	z-index: 1;
+}
+
+#optionsList li{
+	text-align: center;
+	border-radius: .1em;
+}
+
+#optionsList li:hover{
+	background-color: #383838;
+	color: #eeeeee;
+	cursor: pointer;
+}
+
+#signOut{
+	position: fixed;
+	bottom: 3%;
+	right: 7%;
+	color: #383838;
+}
+
+#signOut:hover{
+	color: #009933;
+	cursor: pointer;
+}
+
+#statusIndicator{
+	position: absolute;
+	left: 35%;
+	margin-top: -1.5em;
+	outline: 0px transparent;
+	border: 0px transparent;
+	display: none;
+}

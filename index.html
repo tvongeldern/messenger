@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src='scripts.js'></script>
+<script src='dictionary.js'></script>
+<link rel="stylesheet" type="text/css" href="project1.css">
+<title>TVG's Messaging Service (v1.0) </title>
+</head>
+<body id='htmlbody' onload='onLoad()'>
+
+<div id='loginDiv' class='loginDiv'>
+<br><br><p class='loginTitle'>log in</p>
+<input type='text' id='login' class='login' placeholder='Username'><br><br>
+<input type='password' id='loginPW' class='login' placeholder='Password'><br><br>
+<button onclick='signIn()' class='signInButton'>sign in</button><br>
+<p id='signinResponse'></p>
+<p onclick="hideShow('loginDiv','signupDiv')" id='toSignUp'>Click here to create a new account</p>
+</div>
+
+<div id='signupDiv' class='loginDiv'>
+<br><br><b class='loginTitle'>sign up</b><br><br>
+<input type='text' id='createUser' class='login' placeholder='Create Username'><br><br>
+<input type='password' id='createPW' class='login' placeholder='Set Password'><br><br>
+<input type='password' id='createPW2' class='login' placeholder='Verify Password'><br><br>
+<button onclick='signUp()' class='signInButton'>sign up</button><br>
+<p id='signupResponse' onclick="hideShow('signupDiv','loginDiv')"></p>
+</div>
+
+<div id='imdiv'>
+
+<div id='searchbar'>
+<br><input type='text' id='searchFriend' size='16'><button id='searchButt' onclick='userExists()'>search</button><br><br><br>
+</div>
+
+<table id='showRecent'><th>RECENT CONVERSATIONS</th></table>
+
+<ul id='acOptions'></ul>
+
+<div class='window' id='window'>
+<div id='convoName'></div>
+<img id='statusIndicator' src='' style="width:1.5em;height:1.5em;">
+<div class="conversation">
+
+<table class='messages' id='messages'></table>
+
+
+</div>
+
+<textarea rows="6" cols="30" id='usertext' class='inputBox' onkeyup="checkTxt();myFunctionn(event)"></textarea><br>
+<button onclick='sendMessage()' class='sendMessage' id='sendMessage'>send</button><br><br>
+
+</div><br>
+
+<img src="settings.png" id="settingsPic" style="width:2em;height:2em;" onclick="hideShow('optionsList','optionsList')">
+<ul id='optionsList'>
+<li id='acOn' onclick="setAC('')" onmouseout="document.getElementById('optionsList').style.display = 'none'">Autocorrect On</li>
+<li id='acOff' onclick="setAC('true')">Autocorrect Off</li>
+</ul>
+
+<u id='signOut' onclick='signOut()'>sign out</u>
+</div>
+
+
+</body>
+</html>
